@@ -2,35 +2,20 @@
 <html>
 <head>
     <title>Getting Started</title>
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/style-less.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/style-scss.css">
-<!--    <link rel="stylesheet" type="text/css" href="/assets/css/style-scss.css">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-<div class="box1">box 1</div>
-<div class="box2">box JPG</div>
-<p>test JPG</p>
-<div class="box2 box2--png">box PNG</div>
-<p>test PNG</p>
-<div class="box2 box2--url">box external image</div>
-<p>test external image</p>
-<div class="box2 box2--svg">box SVG</div>
-<p>test SVG</p>
-<div id="jquery-test"></div>
-<h3>Icon fonts</h3>
-<p>
-    <i class="icon-alert"></i>
-    <i class="icon-archive"></i>
-    <i class="icon-book"></i>
-</p>
-<h3>Icon SVG</h3>
-<i class="icon-svg icon-svg-bag"></i>
-<i class="icon-svg icon-svg-call"></i>
-<i class="icon-svg icon-svg-email"></i>
-<h3>VueJS</h3>
-<div id="app">{{ message }}</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <button type="button" id="push-register" class="btn btn-primary">Register push</button>
+            <h3>Token:</h3>
+            <div id="token"></div>
+            <h3>Message:</h3>
+            <xmp id="message"></xmp>
+        </div>
+    </div>
+</div>
 <script src="/assets/js/main.js" async defer></script>
-<!--    <script src="/assets/js/style.js" async defer></script>-->
 </body>
 </html>

@@ -1,1 +1,1 @@
-console.log('jedu');
+import './components/pushNotifikation';
