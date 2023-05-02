@@ -1,0 +1,5 @@
+node_modules/
+dist/assets/
+webpack/config/*.local.js
+temp
+yarn-error.log

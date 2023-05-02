@@ -1,0 +1,17 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "browsers": [
+            "> 1% in CZ",
+            "Explorer >= 10",
+            "iOs >= 9",
+            "last 3 versions"
+          ]
+        }
+      }
+    ]
+  ]
+}
