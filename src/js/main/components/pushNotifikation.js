@@ -12,13 +12,21 @@ const app = initializeApp({
 const messaging = getMessaging(app);
 // Get registration token. Initially this makes a network call, once retrieved
 onMessage(messaging, (payload) => {
+    const date = new Date();
     console.log('Message received. ', payload);
-    document.getElementById('message').textContent = JSON.stringify(payload);
+    const element = document.createElement('div');
+    element.innerHTML = `
+        <strong>LOG Message: ${date.toLocaleString('cs-CS')}</strong>
+        <xmp style="margin:0 0 5px ">${JSON.stringify(payload)}</xmp>
+    `;
+    const wrapper = document.getElementById('message');
+    wrapper.insertBefore(element, wrapper.firstChild);
 });
 
 document.getElementById('push-register').addEventListener('click', event => {
     event.preventDefault();
     getToken(messaging, {vapidKey: 'BPnuI_lSm7s642Gu8H93Dt7zXcB0V6Sij6m7mYmYm0EWnGqC1aMLcbi4tGEDbObj7rQE-SRqsHw__XQuA5f9Dbw'}).then((currentToken) => {
+        const date = new Date();
         if (currentToken) {
             // Send the token to your server and update the UI if necessary
             console.log(currentToken);
@@ -27,10 +35,25 @@ document.getElementById('push-register').addEventListener('click', event => {
         } else {
             // Show permission request UI
             console.log('No registration token available. Request permission to generate one.');
+            const element = document.createElement('div');
+            element.innerHTML = `
+                <strong>LOG Error: ${date.toLocaleString('cs-CS')}</strong>
+                <div style="color: red">No registration token available. Request permission to generate one.</div>
+            `;
+            const wrapper = document.getElementById('message');
+            wrapper.insertBefore(element, wrapper.firstChild);
             // ...
         }
     }).catch((err) => {
         console.log('An error occurred while retrieving token. ', err);
+        const date = new Date();
+        const element = document.createElement('div');
+        element.innerHTML = `
+                <strong>LOG Error: ${date.toLocaleString('cs-CS')}</strong>
+                <div style="color: red">An error occurred while retrieving token.</div>
+            `;
+        const wrapper = document.getElementById('message');
+        wrapper.insertBefore(element, wrapper.firstChild);
         // ...
     });
 });
