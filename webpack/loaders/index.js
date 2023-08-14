@@ -5,3 +5,4 @@ exports.imageMinimizer = require('./webpack.imageMinimizer');
 exports.styleLess = require('./webpack.less');
 exports.postCSS = require('./webpack.postCSS');
 exports.styleScss = require('./webpack.scss');
+exports.workerLoader = require('./webpack.workerLoader');

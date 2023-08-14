@@ -16,6 +16,16 @@
     },
     "sourceType": "module"
   },
+  "globals": {
+    "FIREBASE_AUTHDOMAIN": true,
+    "FIREBASE_API_KEY": true,
+    "FIREBASE_APP_ID": true,
+    "FIREBASE_MESSAGING_SENDER_ID": true,
+    "FIREBASE_PROJECT_ID": true,
+    "FIREBASE_STORAGEBUCKET": true,
+    "FIREBASE_VAPID_KEY": true,
+    "FIREBASE_VERSION": true
+  },
   "rules": {
     "comma-dangle": [
       "warn",

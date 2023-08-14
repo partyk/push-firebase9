@@ -1,1 +1,1 @@
-import './components/pushNotifikation';
+import './components/webPush/index';
