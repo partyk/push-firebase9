@@ -23,3 +23,7 @@ Config overrides for developer mode
 ### webpack.prod.js
 
 Config overrides for production mode
+
+## Demo page
+
+https://pushtest.web-grafika.net/
