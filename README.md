@@ -1,4 +1,4 @@
-# Push notifikcation POC
+# Push notification POC
 
 ## Instalation from Git
 
